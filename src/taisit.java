@@ -3,6 +3,7 @@ import java.util.ArrayList;
 
 
 
+
 public class taisit {
 
 
@@ -122,6 +123,20 @@ public class taisit {
         }else{izv=false;}
 
     }while(izv==true);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     return(jaunaPica);
 
 
