@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.io.File;
 import java.io.IOException;
@@ -41,7 +42,16 @@ public class Picerija {
                 break;}
     return(cena);
     }
-    private static void PrintChecku(double cena, ArrayList pasutijumi){
+    private static void PrintChecku(String m, String printThis){
+        File myObj = new File(m);
+
+        try {
+            FileWriter myWrite = new FileWriter(myObj.getName());
+            myWrite.write(printThis+"\n");
+            myWrite.close();
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();}
 
 
 
@@ -69,9 +79,10 @@ public class Picerija {
             } else {
                 System.out.println("Checks jau bija.");
             }
-        } catch (IOException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();}
+
+            FileWriter myWriter = new FileWriter(myObj.getName());
+            myWriter.write("==================================================");
+            myWriter.close();
 
 
 
@@ -97,6 +108,16 @@ public class Picerija {
                         break;
                     case "veidot savu picu":
                         jaunaPica = taisit.newPica(cena);
+                        System.out.print( taisit.PrintNewPica(jaunaPica) );
+                        try {
+                            FileWriter myWrite = new FileWriter(myObj.getName());
+                            myWrite.write("pastaisita pica: \n");
+                            myWrite.write(taisit.PrintNewPica(jaunaPica));
+                            myWrite.close();
+                        } catch (IOException e) {
+                            System.out.println("An error occurred.");
+                            e.printStackTrace();}
+
                         break;
 
                     case "cenas":
@@ -104,10 +125,11 @@ public class Picerija {
                         break;
                     case "gatavs, pasūtīt!":
                         repeat= false;
-
+                        myWriter.close();
                         break;
                     case "Neko, pārdomāju!":
                         repeat=false;
+                        myWriter.close();
                         break;
                     default:
 
@@ -116,7 +138,10 @@ public class Picerija {
 
             }while(repeat==true);
 
-
+            myWriter.close();
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();}
 
 
     }
