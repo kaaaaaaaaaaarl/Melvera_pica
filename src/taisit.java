@@ -26,19 +26,19 @@ public class taisit {
         switch (siers) {
             case "Mozzarella +0.20":
                 jaunaPica.add("Mozzarella");
-                cena = +0.2;
+                cena = cena +0.2;
                 break;
             case "Cheddar +0.25":
                 jaunaPica.add("Cheddar");
-                cena = +0.25;
+                cena = cena +0.25;
                 break;
             case "Gorgonzola +0.30":
                 jaunaPica.add("Gorgonzola");
-                cena = +0.3;
+                cena = cena +0.3;
                 break;
             case "Provolone +0.30":
                 jaunaPica.add("Provolone");
-                cena = +0.3;
+                cena = cena +0.3;
                 break;
             case "bez siera":
                 jaunaPica.add("bez siera");
@@ -61,19 +61,19 @@ public class taisit {
             switch (gala) {
                 case "peperoni +0.20":
                     jaunaPica.add("peperoni");
-                    cena = +0.2;
+                    cena = cena +0.2;
                     break;
                 case "italijas desa +0.25":
                     jaunaPica.add("italijas desa");
-                    cena = +0.25;
+                    cena = cena +0.25;
                     break;
                 case "Malta liellopa gaļa +0.50":
                     jaunaPica.add("Malta liellopa gaļa");
-                    cena = +0.5;
+                    cena = cena +0.5;
                     break;
                 case "bekons +0.50":
                     jaunaPica.add("bekons");
-                    cena = +0.5;
+                    cena = cena +0.5;
                     break;
                 case "bez gaļas":
 
@@ -95,19 +95,19 @@ public class taisit {
             switch (galaa) {
                 case "sēnes +0.15":
                     jaunaPica.add("sēnes");
-                    cena = +0.15;
+                    cena = cena+0.15;
                     break;
                 case "chilli +0.45":
                     jaunaPica.add("chilli");
-                    cena = +0.45;
+                    cena = cena+0.45;
                     break;
                 case "tomāti +0.15":
                     jaunaPica.add("tomāti");
-                    cena = +0.15;
+                    cena = cena+0.15;
                     break;
                 case "olives +0.30":
                     jaunaPica.add("olives");
-                    cena = +0.30;
+                    cena = cena+0.30;
                     break;
                 case "bez darzeņiem":
 
@@ -127,7 +127,7 @@ public class taisit {
 
         } while (izv == true);
 
-
+        cena = cena + 2;
         return (jaunaPica);
 
 
