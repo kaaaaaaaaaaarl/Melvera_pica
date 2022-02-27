@@ -95,7 +95,7 @@ public class Picerija {
             }
 
         do {
-        String[] opcijas = {"Pasūtīt", "veidot savu picu", "cenas","gatavs, pasūtīt!", "Neko, pārdomāju!"};
+        String[] opcijas = {"Pasūtīt", "veidot savu picu", "cenas","gatavs, pasūtīt!", "Neko, pārdomāju!", "palidzibu"};
         String getFavFruit = (String) JOptionPane.showInputDialog(
                 null,
                 "Laipni lūgti pcas veikalā",
@@ -138,6 +138,11 @@ public class Picerija {
 
                         break;
                     default:
+
+                    case "palidzibu":
+                        repeat=false;
+                        JOptionPane.showMessageDialog(null,"nospiediet pasutit picu lai izveletos kuru picu jūs velaties, un nospiediet, Gatavs pasutit lai apstiprinātu pirkumu");
+                        break;
 
                 }
 
